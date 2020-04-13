@@ -6,7 +6,7 @@ Gerador de codigo CMC7 de cheques, para fins de teste
  2. Executar "yarn install" para instalar as dependencias;
  3. Executar as migrations com o comando "npx knex migrate:latest";
  4. startar a API com "yarn start";
- 5. acessar a API em localhost:2020/cmc7, e já sera apresentando o cmc7 gerado;
+ 5. acessar a API em localhost:2020/cmc7, e já será apresentando o cmc7 gerado;
 
 # Tecnologias utilizadas:
  * NodeJs;
