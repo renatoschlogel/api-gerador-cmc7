@@ -9,18 +9,12 @@ function gerarCmc7(cmc7Modelo, numeroCheque){
     
     const digito = calcularDigito(cmc7Novo);
     cmc7Novo = cmc7Novo.replace('d', digito);
-    
-    console.log(cmc7Modelo);
-    console.log(cmc7Novo);
-    console.log(digito);
    
     return cmc7Novo;
 }
 
 function calcularDigito(cmc7Modelo) {
     let campo = cmc7Modelo.slice(8, 18);
-    console.log('campo', campo);
-
 	let multiplicador = 2;
 	let acumulador = 0;
 
@@ -37,20 +31,14 @@ function calcularDigito(cmc7Modelo) {
 		multiplicador = multiplicador == 2 ? 1 : 2;
 	}
     
-    console.log('acumulador', acumulador);
-    
     let digito = 10 - acumulador % 10;
 
 	return digito > 9 ? 0 : digito;
 }
 
-
-
 module.exports = {
   async generate (request, response) {
     const { cmc7Modelo = "3129632d4727nnnnnn009241501056" } = request.query;
-
-
 
     let numeracaoCheque = await connection('numeracaocheque')
         .where('cmc7Modelo', cmc7Modelo)
