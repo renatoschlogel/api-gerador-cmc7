@@ -1,0 +1,21 @@
+{
+  "name": "cmc7",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "author": "Renato Welinton Schlogel <rschlogel@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon",
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "knex": "^0.20.13",
+    "sqlite3": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
