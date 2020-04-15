@@ -5,7 +5,7 @@ const generateUniqueId = require('../utils/generateUniqueId');
 
 function gerarCmc7(cmc7Modelo, numeroCheque){
 
-    let cmc7Novo = cmc7Modelo.replace('nnnnnn',("000000" + numeroCheque).slice(-6));
+    let cmc7Novo = cmc7Modelo.replace('nnnnnn', ("000000" + numeroCheque).slice(-6) );
     
     const digito = calcularDigito(cmc7Novo);
     cmc7Novo = cmc7Novo.replace('d', digito);
@@ -19,7 +19,6 @@ function calcularDigito(cmc7Modelo) {
 	let acumulador = 0;
 
 	for (let i = campo.length - 1; i >= 0; i--) {
-        console.log(campo, i, '>>', campo.slice(i, i + 1));
 		let total = campo.slice(i, i + 1) * multiplicador;
 		
 		if (total > 9) {
@@ -38,7 +37,7 @@ function calcularDigito(cmc7Modelo) {
 
 module.exports = {
   async generate (request, response) {
-    const { cmc7Modelo = "3129632d4727nnnnnn009241501056" } = request.query;
+    const { cmc7Modelo = "3129632d472nnnnnn5009241501056" } = request.query;
 
     let numeracaoCheque = await connection('numeracaocheque')
         .where('cmc7Modelo', cmc7Modelo)
