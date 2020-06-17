@@ -1,4 +1,4 @@
-# generator-cmc7
+# gerador-cmc7
 Gerador de codigo CMC7 de cheques, para fins de teste de software.
 
 # Para  utilizar:
