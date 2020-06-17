@@ -1,5 +1,5 @@
 # generator-cmc7
-Gerador de codigo CMC7 de cheques, para fins de teste
+Gerador de codigo CMC7 de cheques, para fins de teste de software.
 
 # Para  utilizar:
  1. Fazer o clone do projeto;
@@ -16,3 +16,6 @@ Gerador de codigo CMC7 de cheques, para fins de teste
  * cors;
  * yarn;
  * nodemon (para facilitar o desenvolvimento)
+
+
+* Não nos responsabilizamos pelos numeros gerados;
