@@ -1,4 +1,6 @@
-# gerador-cmc7
+# <a href="https://github.com/facil-e-simples/gerador-cmc7">Se deseja testar online, pode acessar acessar</a>
+
+# api-gerador-cmc7
 Gerador de codigo CMC7 de cheques, para fins de teste de software.
 
 # Para  utilizar:
